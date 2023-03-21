@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // exercise 1
+
+            alert( null || 2 || undefined ); // 2
+            alert( alert(1) || 2 || alert(3) ); // 1 2
+            alert( 1 && null && 2 ); // null
+            alert( alert(1) && alert(2) ); // 1 undefined
+            alert( null || 2 && 3 || 4 ); // 3
+            
+            // exercise 2
+            let age = prompt("age?");
+            if(!(age>=14 && age<=90)) alert("Yes");
+            if(!(age<14 && age>90)) alert("Yes");
+
+            // exercise 3
+            if (-1 || 0) alert( 'first' ); // true
+            if (-1 && 0) alert( 'second' );
+            if (null || -1 && 1) alert( 'third' ); // true
+
+            // exercise 4
+                let login = prompt("Your login, sir?");
+                let password;
+                if(login == "Admin"){
+                    password = prompt("Input the password.");
+                    if(password == "TheMaster"){
+                        alert("Welcome!");
+                    }
+                    else if(password == "" || password == "ESC"){
+                        alert("Canceled");
+                    }
+                    else{
+                        alert("Wrong password");
+                    }
+                }
+                else if(login == "" || login == "ESC"){
+                    alert("Canceled");
+                }
+                else{
+                    alert("I don't know you");
+                }
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // exercise 1
+            // function unique(arr) {
+            //     let set = new Set(arr);
+            //     let arrayReturned = [];
+            //     for (let value of set) {
+            //         arrayReturned.push(value);
+            //     }
+            //     return arrayReturned;
+            // }
+            // let values = ["Hare", "Krishna", "Hare", "Krishna",
+            // "Krishna", "Krishna", "Hare", "Hare", ":-O"
+            // ];
+            // values = unique(values);
+            // alert(JSON.stringify(values));
+
+            // exercise 2
+            // function aclean(arrayInput) {
+            //     let sorted = new Map();
+            //     for (let string of arrayInput) {
+            //         let stringTemp = string.toLowerCase().split("").sort().join("");
+            //         sorted.set(stringTemp,string);
+            //     }
+            //     return Array.from(sorted.values());
+            // }
+            // let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+            // alert(aclean(arr));
+
+            // exercise 3
+            let map = new Map();
+            map.set("name", "John");
+            let keys = Array.from(map.keys());
+            keys.push("more");
+            alert(JSON.stringify(keys));
+        </script>
+    </body>
+</html>
