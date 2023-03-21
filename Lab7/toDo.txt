@@ -1,0 +1,5 @@
+while:
+    K
+
+if:
+    O
