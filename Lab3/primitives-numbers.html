@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // exercise 1
+            // let a = prompt("a?"),
+            //     b = prompt("b?");
+            // alert(+a + +b);
+
+            // exercise 2
+            // ( ( n * 10 )..toFixed(precision) ) / 10 
+
+            // exercise 3
+            // function readNumber() {
+            //     let n 
+            //     while(!isFinite(n)) {
+            //         if(n === "" || n === null) return null;
+            //         n = prompt("n?");
+            //     }
+            //     return n;
+            // }
+            // alert(readNumber());
+
+            // exercise 4
+            // precision loss
+
+            // exercise 5
+            // function random(a, b) {
+            //     return a + Math.random() * (b-a);
+            // }
+            // alert( random( +prompt("a?"), +prompt("b?") ) )
+            
+            // exercise 6
+            function randomInteger(min, max) {
+            let rand = min + Math.random() * (max - min + 1); // 1 for a chance of getting the maximum possible random number
+            return Math.floor(rand);
+            }
+            alert(randomInteger(+prompt("a?"), +prompt("b?")));
+        </script>
+    </body>
+</html>

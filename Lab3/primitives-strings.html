@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // // exercise 1
+            //     function ucFirst(str) {
+            //         return str[0].toUpperCase() + str.slice(1);
+            //     }
+            //     alert( ucFirst("lowercase?") );
+
+            // exercise 2
+            // function checkSpam(str) {
+            //     str = str.toLowerCase();
+            //     if ( str.includes("viagra") || str.includes("xxx") ) {
+            //         return true;
+            //     }
+            //     return false;
+            // }
+            // alert(checkSpam("kasajxXfsJFtn"))
+
+            // exercise 3
+            // function truncate(str, maxLength) {
+            //     if(str.length >  maxLength) {
+            //         str = str.slice(0,maxLength-1) + "…";
+            //     }
+            //     return str;
+            // }
+            // let str = "What I'd like to tell on this topic is:";
+            // str = truncate(str, 20);
+            // alert(str);
+
+            // exercise 4
+            function extractCurrencyValue(cost) {
+                return +cost.slice(1);
+            }
+            let cost = "$120"
+            cost = extractCurrencyValue(cost);
+            alert(cost);
+        </script>
+    </body>
+</html>

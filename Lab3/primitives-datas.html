@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // exercise 1
+            // let date = new Date(2012,1,20,3,12);
+            // alert(date);
+
+            // exercise 2
+            // function getWeekDay(date) {
+            //     switch(date.getDay()) {
+            //         case 0:
+            //             return "SU";
+            //         case 1:
+            //             return "MO";
+            //         case 2:
+            //             return "TU";
+            //         case 3:
+            //             return "WE";
+            //         case 4:
+            //             return "TH";
+            //         case 5:
+            //             return "FR";
+            //         case 6:
+            //             return "SA";
+
+            //     } 
+            // }   
+
+            // let date = new Date(2012, 0, 3);
+            // alert( getWeekDay(date) );
+
+            // exercise 3
+            // function getLocalDay(date) {
+            //     switch(date.getDay()) {
+            //         case 0:
+            //             return 7;
+            //         case 1:
+            //             return 1;
+            //         case 2:
+            //             return 2;
+            //         case 3:
+            //             return 3;
+            //         case 4:
+            //             return 4;
+            //         case 5:
+            //             return 5;
+            //         case 6:
+            //             return 6;
+                        
+            //     } 
+            // }   
+
+            // let date = new Date(2012, 0, 3);
+            // alert( getLocalDay(date) );
+
+            // exercise 4
+            // function getDateAgo(date, days) {
+            //     let newDate = new Date( +date - (days * 24 * 3600 * 1000) );
+            //     return newDate.getDate();
+            // }
+
+            // let date = new Date(2015, 0, 2);
+            // alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+            // alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+            // alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+
+            // exercise 5
+            // function getLastDayOfMonth(year, month) {
+            //     let date = new Date(year, month+1);
+            //     date.setDate(date.getDate()-1);
+            //     return date.getDate();
+            // }
+            // alert( getLastDayOfMonth(2023, 5) ); // 29
+
+            // exercise 6
+            // function getSecondsToday() {
+            //     let today = new Date();
+            //     return today.getHours()*3600 + today.getMinutes()*60 + today.getSeconds();
+            // }
+            // alert( getSecondsToday() );
+
+            // exercise 7
+            // function getSecondsToTomorrow() {
+            //     let today = new Date();
+            //     let todaySeconds = (today.getHours() * 60 + today.getMinutes() ) * 60 + today.getSeconds();
+            //     let wholeDaySeconds = 24 * 3600;
+            //     return wholeDaySeconds - todaySeconds;
+            // }
+            // alert( getSecondsToTomorrow() );
+
+            // exercise 8
+            function formatDate(dateInput) {
+                let answer = "";
+                let date = new Date() - dateInput;
+                if(date < 1000) {
+                    answer = "right now";
+                    return answer;
+                }
+                if(date < 60 * 1000) {
+                    answer = `${date/1000} sec. ago`;
+                    return answer;
+                }
+                if(date < 3600 * 1000) {
+                    answer = `${date/3600} min.ago`;
+                    return answer;
+                }
+                let day = date.getDate().toString();
+                let month = date.getMonth().toString();
+                let year = date.getFullYear().toString();
+                let time = `${date.getHours()}:${date.getMinutes()}`;
+                answer = day + "." + month + "." + year + " " + time;
+                return answer;
+            }
+            alert( formatDate(new Date(new Date - 1)) ); // "right now"
+            alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+            alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+            // yesterday's date like 31.12.16 20:00
+            alert( formatDate(new Date(new Date - 86400 * 1000)) );
+
+        </script>
+    </body>
+</html>

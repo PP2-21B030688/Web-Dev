@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // // exercise 1
+            // function camelize(str) {
+            //     let arraySplited = str.split('-');
+            //     let arrayCamelized = arraySplited.map( function(item, index) {
+            //         if(index > 0) {
+            //             item = item[0].toUpperCase() + item.slice(1);
+            //         }
+            //         return item;
+            //     });
+            //     let stringCamelized = arrayCamelized.join('');
+            //     return stringCamelized;
+            // }
+            // alert( camelize( prompt('Dash-sep. word?') ) );
+
+            // // exercise 2
+            // function filterRange(arr, a, b) {
+            //     let filteredArray = arr.filter( item => (item >= a && item <= b) );
+            //     return filteredArray;
+            // }
+            // let arr = [5, 3, 8, 1];
+            // let filtered = filterRange(arr, 1, 4);
+            // alert(arr);
+            // alert(filtered);
+
+            // // exercise 3
+            // function filterRangeInPlace(arr, a, b) {
+            //     for(let i = 0; i < arr.length; i++) {
+            //         if(arr[i] < a || arr[i] > b) {
+            //             arr.splice(i--, 1);
+            //         }
+            //     }
+            //     return arr;
+            // }
+            // let arr = [5, 3, 8, 1];
+            // filterRangeInPlace(arr, 1, 4);
+            // alert(arr);
+
+            // // exercise 4
+            // function sortDecreasing(a,b) {
+            //     if(a < b) return 1;
+            //     if(a > b) return -1;
+            //     if(a == b) return 0;
+            // }
+            // let arr = [5, 2, 1, -10, 8];
+            // alert( arr.sort(sortDecreasing) );
+
+            // // exercise 5
+            // function copySorted(arr) {
+            //     let arrSorted = arr;
+            //     return arrSorted.sort();
+            // }
+            // let arr = ["HTML", "JavaScript", "CSS"];
+            // let sorted = copySorted(arr);
+            // alert(sorted);
+
+            // // exercise 6
+            // function Calculator() {
+            //     this.calculate = function(operation) {
+            //         let operationElements = operation.split(" ");
+            //         let numberFirst = +operationElements[0],
+            //             numberSecond = +operationElements[2],
+            //             sign = operationElements[1];
+            //         if(this.operationsList[sign]){
+            //             return this.operationsList[sign](numberFirst, numberSecond);
+            //         }
+            //     }
+            //     this.addMethod = function(sign, operation) {
+            //         this.operationsList[sign] = operation;
+            //     }
+            //     this.operationsList = {
+                      
+            //     }; 
+            // }
+            // let calc = new Calculator;
+            // calc.addMethod("*", (a, b) => a * b);
+            // calc.addMethod("/", (a, b) => a / b);
+            // calc.addMethod("**", (a, b) => a ** b);
+            // alert( calc.calculate("2 ** 8") );
+
+            // // exercise 7
+            // function fromeveryectsToArray(arr) {
+            //     let arrayOfNames = [];
+            //     for(everyect of arr) {
+            //         arrayOfNames.push(everyect.name);
+            //     }
+            //     return arrayOfNames;
+            // }
+
+            // let john = { name: "John", age: 25 };
+            // let pete = { name: "Pete", age: 30 };
+            // let mary = { name: "Mary", age: 28 };
+            // let users = [ john, pete, mary ];
+            // let names = fromeveryectsToArray(users);
+            // alert( names ); // John, Pete, Mary
+
+            // // exercise 8
+            // function arrayFromeveryects(users) {
+            //     return users.map( item => ({
+            //         fullName : item.name + " " + item.surname,
+            //         id: item.id,
+            //     }) );
+            // }
+            // let john = { name: "John", surname: "Smith", id: 1 };
+            // let pete = { name: "Pete", surname: "Hunt", id: 2 };
+            // let mary = { name: "Mary", surname: "Key", id: 3 };
+            // let users = [ john, pete, mary ];
+            // let usersMapped = arrayFromeveryects(users);
+            // alert(usersMapped[0].fullName);
+
+            // // exercise 9
+            // function sortByAge(users) {
+            //     return users.sort((a, b) => a.age - b.age);
+            // }
+            // let john = { name: "John", age: 25 };
+            // let pete = { name: "Pete", age: 30 };
+            // let mary = { name: "Mary", age: 28 };
+            // let arr = [ pete, john, mary ];
+            // arr = sortByAge(arr);
+            // alert(arr[0].name); // John
+            // alert(arr[1].name); // Mary
+            // alert(arr[2].name); // Pete
+
+            // exercise 10
+            // ?
+
+            // // exercise 11
+            // function getAverageAge(users){
+            //     let sumOfAges = users.reduce( function(sum, current){
+            //         sum += current.age;
+            //         return sum;
+            //     }, 0);
+            //     return sumOfAges / users.length;
+            // }
+            // let john = { name: "John", age: 25 };
+            // let pete = { name: "Pete", age: 30 };
+            // let mary = { name: "Mary", age: 29 };
+            // let arr = [ john, pete, mary ];
+            // alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+            // // exercise 12
+            // function unique(arr) {
+            //     let arrUnique = new Array();
+            //     for( name of arr ) {
+            //         if(arrUnique.includes(name)){
+            //             continue;
+            //         } else {
+            //             arrUnique.push(name);
+            //         }
+            //     }
+            //     return arrUnique;
+            // }
+            // let strings = ["Hare", "Krishna", "Hare", "Krishna",
+            // "Krishna", "Krishna", "Hare", "Hare", ":-O"
+            // ];
+            // alert( unique(strings) ); // Hare, Krishna, :-O
+
+            // exercise 13
+            function groupById(users) {
+                let newObject = users.reduce( function (every, current) {
+                    every[current.id] = current;
+                    return every;
+                }, {});
+                return newObject;
+            }
+            let users = [
+                {id: 'john', name: "John Smith", age: 20},
+                {id: 'ann', name: "Ann Smith", age: 24},
+                {id: 'pete', name: "Pete Peterson", age: 31},
+            ];
+            let usersById = groupById(users);
+            alert (JSON.stringify(usersById));
+
+        </script>
+    </body>
+</html>

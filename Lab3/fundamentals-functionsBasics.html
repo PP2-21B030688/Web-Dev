@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // exercise 1
+            function checkAge(age) {
+                if (age > 18) {
+                    return true;
+                }
+                // could have else there, no difference at all
+                return confirm('Did parents allow you?');
+            }
+
+            // exercise 2
+            function checkAge(age) {
+                return age > 18 ? true : confirm("Did you parents allow you?");
+            }
+
+            function checkAge(age) {
+                return (age > 18) || confirm("Did your aprenta allow oyou?");
+            }
+            alert(checkAge(18));
+
+            // exercise 3
+            let a = prompt("a?");
+            let b = prompt("b?");
+            function min(a, b) {
+                return a > b ? b : a;
+            }
+            alert(min(a,b));
+
+            // exercise 4
+            let x = prompt("x?");
+            let res=x;
+            let n = prompt("n?");
+            for (let i=1; i<n; i++){
+                res *= x;
+            }
+            alert(res);
+        </script>
+    </head>
+</html>
