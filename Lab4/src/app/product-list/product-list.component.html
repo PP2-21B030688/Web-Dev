@@ -1,0 +1,22 @@
+<h2>Products</h2>
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'"
+    [routerLink]="['/products', product.id]">>
+      {{ product.name }}
+    </a>
+
+    <img src = {{product.image}} >
+
+    <p *ngIf="product.description">
+      <a href={{product.link}} target="_blank">Description: {{ product.description }}</a>
+    </p>
+    <p>&#9734; Rating: {{product.rating}}</p>
+
+    <button type="button" (click)="share()" onclick="window.open('https://web.whatsapp.com://send?text=This is whatsapp sharing example using button')">Share</button>
+
+    <app-product-alerts [product]="product" (notify)="onNotify()">
+    </app-product-alerts>
+
+  </h3>
+</div>
