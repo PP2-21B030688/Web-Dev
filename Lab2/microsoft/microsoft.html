@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Microsoft — домашняя страница официального сайта</title>
+    <style>
+        html{
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            max-width: 100%;
+            background-color: white;
+            font-family: Arial;
+        }
+        #header{
+            display: flex;
+            align-items:center;
+            max-width: 100%;
+            margin-left: 170px;
+            margin-top: 5px;
+        }
+        #microsoft-logo{
+            float: left;
+            width: 115px;
+        }
+        #microsoft-365{
+            margin-left: 25px;
+        }
+        #header-links{
+            display: flex;
+            align-items:center;
+            font-size: 14px;
+        }
+        .header-link, #microsoft-logo-link, #sign-in:hover, #sign-in-icon, #sign-in{
+            text-decoration: none;
+            cursor: pointer;
+            color: #484848;
+        }
+        .header-link:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            color: #282828;
+        }
+        #products{
+            margin-left: 780px;
+        }
+        #downside-arrow{
+            width: 10px;
+            margin-left: 5px;
+        }
+        #search, #sign-in{
+            margin-left: 15px;
+        }
+        #search-icon{
+            width: 14px;
+            margin-left: 5px;
+        }
+
+        .position-absolute{
+            position: absolute;
+        }
+        .position-relative{
+            position: relative;
+        }
+        #main-text-365{
+            font-size: 36px;
+            font-weight: bold;
+            margin-left: 210px;
+            margin-top: 10px;
+            padding-top: 200px;
+        }
+        #main-text-slogan{
+            margin-left: 210px;
+        }
+        #main-text-inv{
+            display: flex;
+            align-items:center;
+        }
+        #main-text-inv-one{
+            margin-top: 20px;
+            margin-left: 210px;
+            width: 150px;
+            height: 35px;
+            color: white;
+            background-color: #0D479A;
+            border-style: solid;
+            border-color: #0D479A;
+            border-radius: 3px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #main-text-inv-one:hover{
+            background-color: #0C408B;
+        }
+        .no-underline{
+            text-decoration: none;
+        }
+        #main-text-inv-one-text{
+            margin-top: 10px;
+        }
+        #main-text-inv-many{
+            display: flex;
+            align-items:center;
+            margin-left: 25px;
+            margin-top: 20px;
+            width: 150px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+        }
+        #rightside-arrow{
+            width: 10px;
+            margin-left: 7px;
+        }
+        #rightside-arrow:hover{
+            margin-left: 15px;
+        }
+        #main-text-inv-many:hover{
+            text-decoration: underline;
+        }
+
+        #windows{
+            margin-left: 100px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #windows::after{
+            display: table;
+            clear: both;
+        }
+        .window{
+            float: left;
+            width: 22%;
+            margin-top: 300px;
+            padding: 15px;
+        }
+        .window-text-bold{
+            margin-top: 10px;
+            font-size: 28px;
+            color: black;
+            font-weight: bold;
+        }
+        .window-text-standart{
+            margin-top: -10px;
+            color: #111111;
+        }
+        .window-text-blue{
+            margin-top: 15px;
+            color: #008aff;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <a href="https://www.microsoft.com/ru-kz/" id="microsoft-logo-link">
+            <img src="microsoft-logo.jpg" id="microsoft-logo">
+        </a>
+        <div id="header-links">
+            <a href="https://www.microsoft.com/ru-ru/microsoft-365?rtc=1"
+               class="header-link" id="microsoft-365">Microsoft 365</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="https://www.microsoft.com/microsoft-365/microsoft-office"
+               class="header-link">Office</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="https://support.microsoft.com/ru-ru/windows"
+               class="header-link">Windows</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="https://support.microsoft.com/ru-ru"
+               class="header-link">Поддержка</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <p class="header-link" id="products">Продукты Майкрософт</p>
+            <img src="microsoft-downside-arrow.png" id="downside-arrow">
+            <p class="header-link" id="search">Поиск</p>
+            <img src="microsoft-search.png" id="search-icon">
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1675433164&rver=7.3.6960.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2frpsauth%2fv1%2faccount%2fSignInCallback%3fstate%3deyJSdSI6Imh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vcnUta3oiLCJMYyI6IjQwOTYiLCJIb3N0Ijoid3d3Lm1pY3Jvc29mdC5jb20ifQ&lc=1033&id=74335&aadredir=0"
+                id="sign-in">
+                <p>Войти</p>
+            </a>
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1675433164&rver=7.3.6960.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2frpsauth%2fv1%2faccount%2fSignInCallback%3fstate%3deyJSdSI6Imh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vcnUta3oiLCJMYyI6IjQwOTYiLCJIb3N0Ijoid3d3Lm1pY3Jvc29mdC5jb20ifQ&lc=1033&id=74335&aadredir=0">
+                <img src="microsoft-sign-in.png">
+            </a>
+        </div>
+    </div>
+    <div class="position-relative">
+        <img src="microsoft-blue.avif" class="position-absolute">
+        <p id="main-text-365" class="position-relative">Microsoft 365</p>
+        <p id="main-text-slogan" class="position-relative">Все, что вам нужно, чтобы достичь большего за меньшее время</p>
+        <div id="main-text-inv">
+            <a href="https://www.microsoft.com/ru-kz/microsoft-365/p/microsoft-365-personal/cfq7ttc0k5bf?icid=mscom_marcom_H1a_M365Personal"
+                class="no-underline">
+            <div id="main-text-inv-one" class="position-relative">
+                <p id="main-text-inv-one-text" class="position-relative">Для 1 человека</p>
+            </div>
+            </a>
+            <a href="https://www.microsoft.com/ru-kz/microsoft-365/p/microsoft-365-family/cfq7ttc0k5dm?icid=mscom_marcom_H1b_M365Family"
+                id="main-text-inv-many" class="position-relative no-underline">
+                <div class="position-relative">
+                    До 6 человек
+                    <img src="microsoft-rightside-arrow.jpg" class="position-relative" id="rightside-arrow">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="windows">
+        <a href="https://support.microsoft.com/ru-ru/windows#pchealthcheck"
+            class="no-underline" id="windows-first-link">
+            <div class="window">
+                <img src="microsoft-window-first.jfif" style="width:100%">
+                <p class="window-text-bold">Разработано для жизни — сегодня и в будущем</p>
+                <p class="window-text-standart">
+                    Следующее поколение игр. Ваши цели. Друзья и семья. С Windows 11 вы станете еще ближе к тому, что успели полюбить.
+                </p>
+                <p class="window-text-blue">
+                    Проверьте, готов ли ваш ПК
+                    <img src="microsoft-rightside-arrow-whiteBG.png" width="10px">
+                </p>
+            </div>
+        </a>
+        <a href="https://www.microsoft.com/ru-ru/edge?form=MI13F3&OCID=MI13F3">
+            <div class="window">
+                <img src="microsoft-window-second.avif" style="width:100%">
+                <p class="window-text-bold">Microsoft Edge</p>
+                <p class="window-text-standart">
+                    Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.
+                </p>
+                <p class="window-text-blue">
+                    Скачать
+                    <img src="microsoft-rightside-arrow-whiteBG.png" width="10px">
+                </p>
+            </div>
+        </a>
+        <a href="https://www.microsoft.com/ru-ru/microsoft-365/onedrive/online-cloud-storage?icid=mscom_marcom_CPH3a_OneDrive">
+            <div class="window">
+                <img src="microsoft-window-third.webp" style="width:100%">
+                <p class="window-text-bold">Microsoft OneDrive</p>
+                <p class="window-text-standart">
+                    Сохраняйте свои файлы и фотографии на OneDrive — они будут доступны с любого устройства и где угодно.
+                </p>
+                <p class="window-text-blue">
+                    Подробнее
+                    <img src="microsoft-rightside-arrow-whiteBG.png" width="10px">
+                </p>
+            </div>
+        </a>
+        <a href="https://www.microsoft.com/ru-ru/microsoft-365/onenote/digital-note-taking-app?icid=mscom_marcom_CPH4a_OneNote">
+            <div class="window">
+                <img src="microsoft-window-fourth.webp" style="width:100%">
+                <p class="window-text-bold">OneNote</p>
+                <p class="window-text-standart">
+                    Приведите свои дела и заметки в порядок.
+                </p>
+                <p class="window-text-blue">
+                    Узнать больше
+                    <img src="microsoft-rightside-arrow-whiteBG.png" width="10px">
+                </p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
