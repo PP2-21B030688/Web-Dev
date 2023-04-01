@@ -1,0 +1,19 @@
+<h2>Current category is <span style="text-decoration: underline;">Souvenirs</span></h2>
+<div class="products-grid">
+    <div *ngFor="let product of souvenirs; let i = index" class="product">
+        <div *ngIf="product.visible">
+            <h3> <a href="{{product.link}}"> {{product.id}}. {{product.name}}  </a> <span class=price> {{product.price}}$ </span> </h3>
+            <img src="{{product.image}}" class="product-image">
+            <p> {{product.description}} </p>
+            <p>
+                <span class="fa fa-star checked"></span>
+                {{product.rating}}
+            </p>
+            <div>
+                <button (click)="like(i)" class="like">Like</button>
+                <p *ngIf="product.likes > 0" class="like-cnt"> {{product.likes}} </p>
+            </div>
+            <button (click)="remove(product.id)" class="removeBtn">Remove</button>
+        </div>
+    </div>
+</div>

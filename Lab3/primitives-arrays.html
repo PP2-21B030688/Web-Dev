@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // // exercise 1
+            // let fruits = ["Apples", "Pear", "Orange"];
+            // let shoppingCart = fruits;
+            // shoppingCart.push("Banana");
+            // alert( fruits.length ); // 4
+
+            // // exercise 2
+            // let style = ["Jazz", "Blues"];
+            // style.push("Rock-n-Roll");
+            // style[style.length/2] = "Classics";
+            // if (style.length % 2 == 0){
+            //     style[style.length/2] = "Classics";
+            // } else {
+            //     style[ Math.floor(style.length/2)] = "Classics";
+            // }
+            // alert(style.shift());
+            // style.unshift("Rap", "Reggae");
+            // alert(style);
+
+            // exercise 3
+            // let arr = ["a", "b"];
+            // arr.push( function() {
+            //     alert( this );
+            // });
+            // arr[2](); // alert(this) will happen (function)
+
+            // // exercise 4
+            // function sumInput() {
+            //     let inputValue,
+            //         arraySum = 0;
+            //     let array = [];
+            //     while(true) {
+            //         inputValue = prompt("Input some number: ");
+            //         if(inputValue == "" || inputValue == null || !isFinite(inputValue)) {
+            //             break;
+            //         }
+            //         array.push(+inputValue);
+            //         arraySum += +inputValue;
+            //     }
+            //     alert(arraySum);
+            // }
+            // sumInput();
+
+            // exercise 5
+            function getMaxSubSum(arr) {
+                let subSum,
+                    maxSubSum = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    subSum = 0;
+                    for (let j = i; j < arr.length; j++) {
+                        subSum += arr[j];
+                        maxSubSum = Math.max(subSum, maxSubSum);
+                    }
+                }
+                return maxSubSum;
+            }
+
+            let arr = [-1, 2, 3, -9];
+            alert(getMaxSubSum(arr))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            // exercise 1
+            let user = new Object();
+            user.name = "John";
+            user.surname = "Smith";
+            user.name = "Pete";
+            delete user.name;
+
+            // exercise 2
+            function isEmpty(schedule) {
+                let check = false;
+                for (let key in schedule) {
+                    check = true;
+                    break;
+                }
+                if (check) return true;
+                return false;
+            }
+
+            let schedule = new Object();
+            alert( isEmpty(schedule) );
+            schedule["8:30"] = "get up";
+            alert( isEmpty(schedule) );
+
+            // exercise 3
+            function sumSalaries(salaries) {
+                let sum = 0;
+                for (let key in salaries) {
+                    sum += salaries[key];
+                }
+                return sum;
+            }
+            let salaries = {
+                John: 100,
+                Ann: 160,
+                Pete: 130,
+            }
+            alert( sumSalaries(salaries) );
+
+            // exercise 4
+            function multiplyNumeric(menu) {
+                for (let key in menu) {
+                    if ( typeof(menu[key]) == "number" ) {
+                        menu[key] *= 2;
+                    }
+                }
+            }
+
+            let menu = {
+                width: 200,
+                height: 300,
+                title: "My menu"
+            };
+
+            multiplyNumeric(menu);
+
+            for (let key in menu) {
+                alert(menu[key]);
+            }
+
+        </script>
+    </body>
+</html>

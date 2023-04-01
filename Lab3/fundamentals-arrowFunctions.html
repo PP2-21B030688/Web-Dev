@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function ask(question, yes, no) {
+                if (confirm(question)) yes();
+                else no();
+            }
+            let yes = () => alert("You agreed.");
+            let no = () => alert("You canceled the execution.");
+            ask("Do you like it?",yes,no);
+        </script>
+    </head>
+</html>

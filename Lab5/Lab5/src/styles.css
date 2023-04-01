@@ -1,0 +1,9 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(247, 158, 255, 0.2);
+}
