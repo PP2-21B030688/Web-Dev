@@ -1,1 +1,1 @@
-# This is a special private repository for practicing in Git
+# WebDev KBTU repo
