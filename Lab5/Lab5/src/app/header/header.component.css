@@ -1,0 +1,44 @@
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255,187,148,1) 0%, rgba(244,202,255,1) 50%, rgba(255,143,202,1) 100%);
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 30, 0);
+    border-bottom-width: 1px;
+}
+
+.header-logo {
+    width: 4em;
+    margin: 0 2em 0 3em;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgb(255, 60, 0);
+}
+
+header h1 {
+    user-select: none;
+    color: rgb(224, 51, 51);
+}
+
+header ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 10em;
+    margin-left: 10em;
+    list-style-type: none;
+}
+
+header ul li {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(224, 51, 51);
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+header ul li:hover  {
+    transform: scale(1.1);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // exercise 1
+            if ("0") {
+                alert( 'Hello' ); // yes, since 0 is non-empty string
+            }
+
+            // exercise 2
+            let condition = prompt("What is the “official” name of JavaScript?");
+            if(condition == "ECMAScript") alert("Right!");
+            else alert("You don't know!")
+
+            // exercise 3
+            let age = prompt("Enter the number!");
+            if(age == 1) alert(0);
+            else if(age > 1) alert(1);
+            else alert(-1);
+
+            // exercise 4 
+            let a=2,
+                b=1;
+            let result = ( (a+b)>4 ) ? "Below" : "Not Below";
+            alert(result);
+
+            // exercise 5
+            let login = prompt("Your login, sir?")
+            let message = (login=="Employee") ? "Hello" :   
+                (login=="Director") ? "Greetings" :
+                    (login=="") ? "No login" : "";
+            alert(message);
+        </script>
+    </head>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // exercise 1
+            // let user = {
+            //     name: "John",
+            //     years: 30,
+            // };
+            // let {name, years, isAdmin = false} = user;
+            // alert(name);
+            // alert(years);
+            // alert(isAdmin);
+
+            // exercise 2
+            function topSalary(salaries) {
+                let maxSalary = -1;
+                let nameRichest = null;
+                for (let [name, salary] of Object.entries(salaries) ) {
+                    if(salary >= maxSalary) {
+                        maxSalary = salary;
+                        nameRichest = name;
+                    }
+                } 
+                return nameRichest;
+            }
+            let salaries = {
+                "John": 100,
+                "Pete": 300,
+                "Mary": 250
+            };
+            alert(topSalary(salaries));
+
+        </script>
+    </body>
+</html>

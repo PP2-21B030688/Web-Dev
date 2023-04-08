@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- add mocha css, to show results -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+        <!-- add mocha framework code -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+        <script>
+            // enable bdd-style testing
+            mocha.setup('bdd');
+        </script>
+
+        <!-- add chai -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+        <script>
+            // chai has a lot of stuff, let's make assert global
+            let assert = chai.assert;
+        </script> 
+
+    </head>
+
+    <body>
+        <script id="function">
+            function pow (x, n) {
+                let res = 1;
+                for (let i=0; i < n; i++){
+                    res*=x;
+                }
+                return res;
+            }
+        </script>
+
+        <script id="tests">
+            describe ("Pow Function", function (){
+                describe ("Raises x to 4-th power", function () {
+                    function makeTest (x) {
+                        let expected = x * x * x * x;
+                        it(`${x} raised to power of 4 is ${expected}`, function () {
+                            assert.equal(pow(x,4), expected);
+                        });
+                    }
+                    for (let i=1; i < 10; i++){
+                        makeTest(i);
+                    }
+                });
+            });
+        </script>
+
+        <div id="mocha"></div>
+        <script>
+            mocha.run();
+        </script>
+        
+    </body>
+</html>

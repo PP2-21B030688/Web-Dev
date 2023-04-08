@@ -1,0 +1,18 @@
+h2 {
+    margin-left: 1em;
+}
+
+u {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+u li {
+    margin-left: 1.5rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+u li:hover {
+    text-decoration: underline;
+}
