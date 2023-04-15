@@ -3,6 +3,10 @@ import json
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+from django.views.generic import ListView
+from rest_framework import views
+from rest_framework.response import Response
+
 from . import serializing
 from . import models
 
@@ -95,9 +99,8 @@ def getVacancy(request, pk):
         message = vacancy.deleteVacancy()
         return JsonResponse({"message": message})
     
-@csrf_exempt
-def getTopTenVacancies(request):
-    if(request.method == "GET"):
-        vacancies = models.Vacancy.objects.all().order_by("-salary")[:10]
+class VacanciesTop(ListView, views.APIView):
+    def get(self, request):
+        vacancies = models.Vacancy.objects.all().order_by("-salary")
         serializer = serializing.VacancySerializer(vacancies, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return Response(serializer.data)

@@ -8,5 +8,5 @@ urlpatterns = [
     path('companies/<int:pk>/vacancies/', views.getVacanciesByCompany),
     path('vacancies/', views.getVacancies),
     path('vacancies/<int:pk>/', views.getVacancy),
-    path('vacancies/top/', views.getTopTenVacancies),
+    path('vacancies/top/', views.VacanciesTop.as_view()),
 ]
