@@ -1,0 +1,12 @@
+<div *ngFor="let company of companies">
+    <p>
+        ID: {{company.id}} <br>
+        Name: {{company.name}} <br>
+        City: {{company.city}} <br>
+        Address: {{company.address}} <br>
+    </p>
+
+    <p *ngFor="let vacancy of vacancies">
+        <span *ngIf="correctCompany(vacancy, company.id)">Vacancy for this company: {{vacancy.name}}</span>
+    </p>
+</div>  
